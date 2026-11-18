@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alpha Vision Business Holdings | Building Excellence. Creating Opportunities. Growing Africa.</title>
+<meta name="description" content="Alpha Vision Business Holdings: construction, cleaning and facilities, security technology, property, events, mining support and investment. Bulawayo and Johannesburg.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2a1638;--plum:#57306e;--blue:#2a7bbf;--sky:#33c1f0;--orange:#e37a35;--red:#e63038;--paper:#fbfaf8;--mist:#eef3f8;--line:#d9e0e8;--muted:#5b5566;--radius:22px}
+@media (prefers-color-scheme:dark){:root{--paper:#17101f;--mist:#211730;--line:#3a2b4d;--ink:#f3eef8;--muted:#b9afc8}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:Figtree,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:104px 0}
+.lead{color:var(--muted);max-width:60ch;font-size:1.1rem}
+h2{font-size:clamp(2rem,4.4vw,3.4rem);margin-bottom:18px;max-width:18ch}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font:600 1rem Figtree,sans-serif;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.pri{background:linear-gradient(110deg,var(--blue),var(--plum));color:#fff;box-shadow:0 10px 30px -10px var(--plum)}
+.btn.ghost{border-color:var(--line);color:var(--ink);background:transparent}
+/* progress bar + nav */
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--sky),var(--orange),var(--red));z-index:60}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--paper) 82%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:10px;font:800 1.15rem 'Bricolage Grotesque';text-decoration:none}
+.brand svg{width:36px;height:36px}
+.brand small{display:block;font:500 .7rem Figtree;color:var(--muted);letter-spacing:.04em}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+.links .btn{padding:10px 20px;color:#fff}
+#burger{display:none;background:none;border:0;font-size:1.7rem;color:var(--ink);cursor:pointer}
+/* hero */
+.hero{padding:72px 0 96px;overflow:hidden;background:radial-gradient(900px 500px at 85% 20%,color-mix(in srgb,var(--sky) 22%,transparent),transparent),radial-gradient(700px 400px at 0% 100%,color-mix(in srgb,var(--orange) 16%,transparent),transparent)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);font-weight:800;margin-bottom:24px}
+.hero h1 span{display:block}
+.hero h1 span:nth-child(2){color:var(--blue)}.hero h1 span:nth-child(3){color:var(--orange)}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.iris{width:100%;max-width:480px;justify-self:center;filter:drop-shadow(0 30px 40px rgba(87,48,110,.25))}
+.iris .spin{transform-origin:100px 100px;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#pupil{transition:transform .15s ease-out}
+.ticker{margin-top:60px;display:flex;gap:10px;flex-wrap:wrap}
+.ticker span{border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:.85rem;color:var(--muted)}
+/* placeholders */
+.ph{position:relative;display:grid;place-items:center;text-align:center;border-radius:var(--radius);min-height:260px;color:var(--muted);font-size:.9rem;background:repeating-linear-gradient(135deg,var(--mist) 0 14px,color-mix(in srgb,var(--mist) 70%,var(--line)) 14px 15px);border:1.5px dashed var(--line)}
+.ph b{display:block;font:700 1rem 'Bricolage Grotesque';color:var(--ink)}
+/* divisions */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0 28px}
+.tab{padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);background:none;color:var(--ink);cursor:pointer;font:500 .95rem Figtree}
+.tab[aria-selected=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:40px;align-items:center;animation:in .4s}
+.panel.on{display:grid}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+.panel h3{font-size:2rem;margin-bottom:12px}
+.panel ul{list-style:none;padding:0;margin:20px 0;display:flex;flex-wrap:wrap;gap:8px}
+.panel li{background:var(--mist);padding:6px 14px;border-radius:10px;font-size:.92rem}
+.panel .ph{min-height:340px}
+/* tech */
+.tech{background:var(--ink);color:#f3eef8;border-radius:40px;margin:0 16px}
+.tech h2{max-width:20ch}.tech .lead{color:#c7bcd6}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:40px}
+.tgrid div{padding:20px;border:1px solid #ffffff26;border-radius:16px;transition:background .2s,transform .2s;cursor:default}
+.tgrid div:hover{background:#ffffff12;transform:translateY(-4px)}
+.tgrid i{display:block;width:10px;height:10px;border-radius:50%;margin-bottom:14px}
+/* reach */
+.reach{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:var(--mist)}
+.card h3{font-size:1.4rem;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:7px 14px;border-radius:999px;font-size:.9rem;background:var(--paper);border:1px solid var(--line)}
+.chip.live{background:var(--blue);color:#fff;border-color:var(--blue)}
+.vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;margin-top:44px}
+.vals p{color:var(--muted)}.vals h3{font-size:1.25rem;margin-bottom:8px;border-top:3px solid var(--orange);padding-top:14px}
+.vals div:nth-child(2) h3{border-color:var(--sky)}.vals div:nth-child(3) h3{border-color:var(--red)}.vals div:nth-child(4) h3{border-color:var(--plum)}
+/* quote */
+.quote{background:var(--mist)}
+.qgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+form{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:32px;box-shadow:0 30px 60px -35px var(--plum)}
+.steps{display:flex;gap:8px;margin-bottom:26px}
+.steps i{flex:1;height:5px;border-radius:5px;background:var(--line);transition:background .3s}
+.steps i.on{background:linear-gradient(90deg,var(--blue),var(--sky))}
+.step{display:none}.step.on{display:block;animation:in .35s}
+.step h3{font-size:1.5rem;margin-bottom:6px}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:18px 0}
+.opt input{position:absolute;opacity:0}
+.opt span{display:block;padding:14px 16px;border:1.5px solid var(--line);border-radius:14px;cursor:pointer;font-weight:500;transition:.15s}
+.opt input:checked+span{border-color:var(--blue);background:color-mix(in srgb,var(--sky) 16%,transparent);box-shadow:inset 0 0 0 1px var(--blue)}
+.opt input:focus-visible+span{outline:3px solid var(--sky)}
+label.f{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px}
+input.t,select,textarea{width:100%;padding:13px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);font:inherit}
+textarea{min-height:110px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.err{color:var(--red);font-size:.88rem;min-height:1.3em;margin-top:8px}
+.nav2{display:flex;justify-content:space-between;gap:10px;margin-top:20px;flex-wrap:wrap}
+.done{display:none}.done pre{white-space:pre-wrap;background:var(--mist);padding:16px;border-radius:14px;font:.9rem/1.5 Figtree;margin:16px 0}
+.contact{margin-top:30px;display:grid;gap:14px}
+.contact a{text-decoration:none;font-weight:600}
+/* offices */
+.otabs{display:flex;gap:8px;margin:30px 0 20px}
+.office{display:none}.office.on{display:grid;grid-template-columns:1fr 1fr;gap:28px;animation:in .4s}
+.office h3{font-size:1.6rem;margin-bottom:10px}
+.office p{margin-bottom:8px;color:var(--muted)}.office a{color:var(--blue);font-weight:600}
+footer{padding:50px 0;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
+footer img{width:120px;border-radius:14px;background:#fff}
+#wa{position:fixed;right:20px;bottom:20px;z-index:55;background:#25d366;color:#fff;border-radius:999px;padding:14px 20px;text-decoration:none;font-weight:600;box-shadow:0 12px 30px -8px rgba(0,0,0,.4)}
+@media(max-width:860px){
+section{padding:72px 0}
+.hero .wrap,.panel.on,.reach,.qgrid,.office.on{grid-template-columns:1fr}
+.hero .iris{max-width:300px;order:-1}
+.links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--paper);flex-direction:column;padding:24px;border-bottom:1px solid var(--line)}
+.links.open{display:flex}#burger{display:block}.two{grid-template-columns:1fr}.tech{margin:0;border-radius:0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<svg width="0" height="0" style="position:absolute"><defs><path id="cr" d="M100 12A88 88 0 0 1 188 100A70 70 0 0 0 100 12Z"/></defs></svg>
+
+<nav><div class="wrap">
+<a class="brand" href="#top" aria-label="Alpha Vision home"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#cr" fill="#33c1f0"/><use href="#cr" fill="#e63038" transform="rotate(90 100 100)"/><use href="#cr" fill="#e37a35" transform="rotate(180 100 100)"/><use href="#cr" fill="#2a7bbf" transform="rotate(270 100 100)"/><circle cx="100" cy="100" r="30" fill="#57306e"/></svg><span>Alpha Vision<small>Business Holdings</small></span></a>
+<button id="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+<div class="links" id="links"><a href="#divisions">Divisions</a><a href="#technology">Security tech</a><a href="#africa">Pan-African</a><a href="#offices">Offices</a><a class="btn pri" href="#quote">Request a quote</a></div>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div>
+<h1><span>Building excellence.</span><span>Creating opportunities.</span><span>Growing Africa.</span></h1>
+<p class="lead">A diversified African business group serving clients in construction, facilities, security technology, property, events, mining support and investment.</p>
+<div class="cta"><a class="btn pri" href="#quote">Request a quotation</a><a class="btn ghost" href="#divisions">Explore our services</a></div>
+<div class="ticker"><span>Established 2019</span><span>Bulawayo &amp; Johannesburg</span><span>Multi-sector group</span></div>
+</div>
+<svg class="iris" viewBox="0 0 200 200" role="img" aria-label="Alpha Vision iris emblem">
+<g class="spin"><use href="#cr" fill="#33c1f0"/><use href="#cr" fill="#e63038" transform="rotate(90 100 100)"/><use href="#cr" fill="#e37a35" transform="rotate(180 100 100)"/><use href="#cr" fill="#2a7bbf" transform="rotate(270 100 100)"/></g>
+<g id="pupil"><circle cx="100" cy="100" r="30" fill="#57306e"/><path d="M80 92A22 22 0 0 1 108 78" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/></g>
+</svg>
+</div></header>
+
+<section id="divisions"><div class="wrap">
+<h2>Seven divisions. One dependable partner.</h2>
+<p class="lead">Choose a division to see what we deliver. Every service can be requested through one quotation.</p>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div id="panels"></div>
+</div></section>
+
+<section class="tech" id="technology"><div class="wrap">
+<h2>Security and access technology, installed and supported.</h2>
+<p class="lead">Practical deployment, reliable systems and responsive repairs, upgrades and maintenance.</p>
+<div class="tgrid">
+<div><i style="background:#33c1f0"></i>Wi-Fi systems</div><div><i style="background:#2a7bbf"></i>Fibre installations</div><div><i style="background:#e63038"></i>Access control</div><div><i style="background:#e37a35"></i>CCTV and security</div><div><i style="background:#33c1f0"></i>Clocking and time-attendance</div><div><i style="background:#2a7bbf"></i>Card readers</div><div><i style="background:#e63038"></i>Turnstile gates</div><div><i style="background:#e37a35"></i>Boom gates</div>
+</div>
+<div class="ph" style="margin-top:40px;min-height:300px;background:#ffffff0d;border-color:#ffffff30;color:#c7bcd6"><div><b style="color:#fff">Photo placeholder</b>Installation team / CCTV control room (1600 x 600)</div></div>
+</div></section>
+
+<section id="africa"><div class="wrap">
+<h2>A phased, partnership-led route across Africa.</h2>
+<p class="lead">We enter markets with clear demand and strong local partners, growing region by region.</p>
+<div class="reach">
+<div class="card"><h3>Where we operate</h3><div class="chips"><span class="chip live">Zimbabwe: Bulawayo</span><span class="chip live">South Africa: Johannesburg</span></div></div>
+<div class="card"><h3>Planned expansion</h3><div class="chips"><span class="chip">Botswana</span><span class="chip">Zambia</span><span class="chip">Mozambique</span><span class="chip">Namibia</span><span class="chip">Malawi</span><span class="chip">Tanzania</span><span class="chip">Kenya</span><span class="chip">Rwanda</span><span class="chip">Ghana</span><span class="chip">Nigeria</span></div></div>
+</div>
+<div class="vals">
+<div><h3>Disciplined execution</h3><p>Clear scopes, professional delivery and measurable outcomes.</p></div>
+<div><h3>Strategic partnerships</h3><p>Local expertise combined with regional and international capability.</p></div>
+<div><h3>Responsible expansion</h3><p>Market-by-market growth with the right legal and regulatory compliance.</p></div>
+<div><h3>African impact</h3><p>Employment, skills development and SME participation.</p></div>
+</div>
+<div class="ph" style="margin-top:50px"><div><b>Photo placeholder</b>Team on site / community project (1600 x 500)</div></div>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap qgrid">
+<div>
+<h2>Request a quotation.</h2>
+<p class="lead">Tell us what you need in three short steps. We reply with a quote or a site-visit time.</p>
+<div class="contact">
+<a href="tel:+263775293932">Bulawayo: 077 529 3932</a>
+<a href="tel:+27728876103">Johannesburg: +27 72 887 6103</a>
+</div>
+<div class="ph" style="margin-top:30px;min-height:220px"><div><b>Photo placeholder</b>Client handover / site visit</div></div>
+</div>
+<form id="qf" novalidate>
+<div class="steps" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+<div class="step on" data-s="0"><h3>What do you need?</h3><p class="lead" style="font-size:.95rem">Pick one or more services.</p><div class="opts" id="svc"></div><div class="err" id="e0" role="alert"></div><div class="nav2"><span></span><button type="button" class="btn pri" data-next>Next</button></div></div>
+<div class="step" data-s="1"><h3>About the project</h3>
+<div class="two"><div><label class="f" for="loc">Project location</label><input class="t" id="loc" placeholder="City, country"></div><div><label class="f" for="when">Timeline</label><select id="when"><option>As soon as possible</option><option>Within 1 month</option><option>1 to 3 months</option><option>Planning ahead</option></select></div></div>
+<label class="f" for="det">Project details</label><textarea id="det" placeholder="Size, current situation, anything we should know"></textarea>
+<div class="err" id="e1" role="alert"></div><div class="nav2"><button type="button" class="btn ghost" data-back>Back</button><button type="button" class="btn pri" data-next>Next</button></div></div>
+<div class="step" data-s="2"><h3>Your details</h3>
+<div class="two"><div><label class="f" for="nm">Full name</label><input class="t" id="nm" autocomplete="name"></div><div><label class="f" for="co">Company (optional)</label><input class="t" id="co" autocomplete="organization"></div></div>
+<div class="two"><div><label class="f" for="ph">Phone or WhatsApp</label><input class="t" id="ph" type="tel" autocomplete="tel"></div><div><label class="f" for="em">Email</label><input class="t" id="em" type="email" autocomplete="email"></div></div>
+<label class="f" for="of">Send to</label><select id="of"><option value="bul">Bulawayo office</option><option value="jhb">Johannesburg office</option></select>
+<div class="err" id="e2" role="alert"></div><div class="nav2"><button type="button" class="btn ghost" data-back>Back</button><button type="submit" class="btn pri">Prepare my request</button></div></div>
+<div class="done" id="done"><h3>Your request is ready.</h3><p class="lead" style="font-size:.95rem">Send it to our team by WhatsApp or email.</p><pre id="sum"></pre>
+<div class="nav2"><a class="btn pri" id="sendwa" target="_blank" rel="noopener">Send on WhatsApp</a><a class="btn ghost" id="sendem">Send by email</a><button type="button" class="btn ghost" id="copy">Copy text</button></div></div>
+</form>
+</div></section>
+
+<section id="offices"><div class="wrap">
+<h2>Visit or call us.</h2>
+<div class="otabs" id="otabs"><button class="tab" aria-selected="true" data-o="0">Bulawayo, Zimbabwe</button><button class="tab" aria-selected="false" data-o="1">Johannesburg, South Africa</button></div>
+<div class="office on"><div><h3>Head office</h3><p>No. 8 Gifford House<br>9th Avenue &amp; Joshua Nkomo Street<br>Bulawayo, Zimbabwe</p><p>Cell: <a href="tel:+263775293932">077 529 3932</a></p><p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Gifford+House+9th+Avenue+Joshua+Nkomo+Street+Bulawayo">Open in Google Maps</a></p></div><div class="ph"><div><b>Map or office photo placeholder</b></div></div></div>
+<div class="office"><div><h3>Rosebank office</h3><p>Craddock Square<br>169 Oxford Rd, Rosebank<br>Johannesburg, 2196</p><p>Phone: <a href="tel:+27728876103">+27 72 887 6103</a></p><p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Craddock+Square+169+Oxford+Rd+Rosebank+Johannesburg">Open in Google Maps</a></p></div><div class="ph"><div><b>Map or office photo placeholder</b></div></div></div>
+</div></section>
+
+<footer><div class="wrap">
+<img src="assets/logo.png" alt="Alpha Vision Business Holdings logo">
+<div><strong>Alpha Vision Business Holdings</strong><br>Your satisfaction is our first priority.<br>Founder &amp; CEO: Clifford Ncube</div>
+<div>&copy; <span id="yr"></span> Alpha Vision Business Holdings. Established 2019.</div>
+</div></footer>
+<a id="wa" href="https://wa.me/263775293932" target="_blank" rel="noopener">WhatsApp us</a>
+
+<script>
+// ---- EDIT THESE ----
+const CFG={email:"info@yourdomain.com",bul:"263775293932",jhb:"27728876103"};
+const DIV=[
+["Construction and infrastructure","Construction, renovations, remodeling, alterations, plastering, Rhinolite, repairs, waterproofing and damp-proofing.",["Renovations","Plastering","Rhinolite","Waterproofing","Damp-proofing"]],
+["Cleaning and facilities","Commercial and domestic cleaning, deep cleaning, carpet, couch and mattress cleaning, plus facilities support.",["Commercial","Domestic","Deep cleaning","Carpets and couches","Mattresses"]],
+["Security and access technology","Wi-Fi and fibre, access control, CCTV, clocking systems, card readers, turnstiles and boom gates.",["CCTV","Access control","Fibre","Turnstiles","Boom gates"]],
+["Property and real estate","Acquisition, sales, rentals, property management, maintenance and investment-oriented services.",["Sales","Rentals","Management","Maintenance"]],
+["Events management","Planning, coordination, staffing and operational support for corporate, private and institutional events.",["Corporate","Private","Institutional","Staffing"]],
+["Mining and industrial support","Mining support services, equipment and accessories, industrial supply and strategic partnerships.",["Support services","Equipment","Industrial supply"]],
+["Business and investment","A platform for strategic partnerships, investment opportunities and procurement relationships.",["Partnerships","Investment","Procurement"]]];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+$("#yr").textContent=new Date().getFullYear();
+// progress bar, mobile menu
+addEventListener("scroll",()=>{$("#bar").style.width=scrollY/(document.body.scrollHeight-innerHeight)*100+"%"},{passive:true});
+$("#burger").onclick=e=>{const o=$("#links").classList.toggle("open");e.target.setAttribute("aria-expanded",o)};
+$$("#links a").forEach(a=>a.onclick=()=>$("#links").classList.remove("open"));
+// iris follows pointer
+const pu=$("#pupil");
+addEventListener("pointermove",e=>{const r=$(".iris").getBoundingClientRect(),dx=(e.clientX-(r.left+r.width/2))/innerWidth,dy=(e.clientY-(r.top+r.height/2))/innerHeight;pu.style.transform=`translate(${dx*34}px,${dy*34}px)`});
+// divisions
+DIV.forEach((d,i)=>{
+ $("#tabs").insertAdjacentHTML("beforeend",`<button class="tab" role="tab" aria-selected="${!i}" data-i="${i}">${d[0]}</button>`);
+ $("#panels").insertAdjacentHTML("beforeend",`<div class="panel${i?"":" on"}" role="tabpanel"><div><h3>${d[0]}</h3><p class="lead">${d[1]}</p><ul>${d[2].map(x=>`<li>${x}</li>`).join("")}</ul><a class="btn pri" href="#quote" data-pick="${i}">Quote this service</a></div><div class="ph"><div><b>Photo placeholder</b>${d[0]} (900 x 700)</div></div></div>`);
+ $("#svc").insertAdjacentHTML("beforeend",`<label class="opt"><input type="checkbox" value="${d[0]}"><span>${d[0]}</span></label>`);
+});
+$$("#tabs .tab").forEach(t=>t.onclick=()=>{$$("#tabs .tab").forEach(x=>x.setAttribute("aria-selected",x===t));$$(".panel").forEach((p,i)=>p.classList.toggle("on",i==t.dataset.i))});
+$$("[data-pick]").forEach(b=>b.addEventListener("click",()=>{$$("#svc input")[b.dataset.pick].checked=true}));
+// offices
+$$("#otabs .tab").forEach(t=>t.onclick=()=>{$$("#otabs .tab").forEach(x=>x.setAttribute("aria-selected",x===t));$$(".office").forEach((p,i)=>p.classList.toggle("on",i==t.dataset.o))});
+// quote wizard
+let step=0;const steps=$$(".step"),bars=$$(".steps i");
+function go(n){step=n;steps.forEach((s,i)=>s.classList.toggle("on",i==n));bars.forEach((b,i)=>b.classList.toggle("on",i<=n))}
+$$("[data-back]").forEach(b=>b.onclick=()=>go(step-1));
+$$("[data-next]").forEach(b=>b.onclick=()=>{
+ if(step==0&&!$$("#svc input:checked").length){$("#e0").textContent="Select at least one service.";return}
+ if(step==1&&!$("#det").value.trim()){$("#e1").textContent="Add a few details so we can quote accurately.";$("#det").focus();return}
+ $("#e0").textContent=$("#e1").textContent="";go(step+1)});
+$("#qf").addEventListener("submit",e=>{
+ e.preventDefault();const em=$("#em").value.trim(),ph=$("#ph").value.trim();
+ if(!$("#nm").value.trim()||(!ph&&!em)){$("#e2").textContent="Enter your name and a phone number or email.";return}
+ if(em&&!/^\S+@\S+\.\S+$/.test(em)){$("#e2").textContent="That email address looks incomplete.";return}
+ const svc=$$("#svc input:checked").map(x=>x.value).join(", ");
+ const msg=`Quotation request\nServices: ${svc}\nLocation: ${$("#loc").value||"Not given"}\nTimeline: ${$("#when").value}\nDetails: ${$("#det").value}\n\nName: ${$("#nm").value}\nCompany: ${$("#co").value||"-"}\nPhone: ${ph||"-"}\nEmail: ${em||"-"}`;
+ $("#sum").textContent=msg;
+ $("#sendwa").href=`https://wa.me/${CFG[$("#of").value]}?text=${encodeURIComponent(msg)}`;
+ $("#sendem").href=`mailto:${CFG.email}?subject=${encodeURIComponent("Quotation request: "+svc)}&body=${encodeURIComponent(msg)}`;
+ steps.forEach(s=>s.classList.remove("on"));bars.forEach(b=>b.classList.add("on"));$("#done").style.display="block"});
+$("#copy").onclick=async e=>{try{await navigator.clipboard.writeText($("#sum").textContent);e.target.textContent="Copied"}catch{e.target.textContent="Select and copy manually"}};
+</script>
+</body>
+</html>
